@@ -1,0 +1,40 @@
+<template>
+  <div>
+    <input v-model="email" type="text" placeholder="email">
+    <button @click="loadUser">Create or Load Profile</button>
+  </div>
+</template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  name: 'UserLogin',
+  components: {
+  },
+  data: () => ({
+    email: "",
+  }),
+  mounted() {
+    // this.loadUser()
+  },
+  methods: {
+    loadUser() {
+      axios.post(process.env.VUE_APP_API_URL+'/loaduser', {"email":this.email})
+            .then(response => {
+                this.$emit('userLoaded',response.data.user)
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+  }
+}
+</script>
+
+<style>
+button{
+  margin-left: 4px;
+  margin-right: 4px;
+}
+</style>

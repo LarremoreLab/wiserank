@@ -1,0 +1,4 @@
+llvmlite
+numba
+numpy
+scipy
