@@ -14,12 +14,15 @@ app = Flask(__name__, static_folder='../frontend/dist/',    static_url_path='/')
 app.config['DEBUG'] = True
 CORS(app, resources={r"/*": {"origins": "*"}})
 
-basedir = os.path.abspath('')
-database_uri = os.environ.get('DATABASE_CONNECTION_POOL_URL') or 'sqlite:///' + os.path.join(basedir, 'wiserank.db')
-app.config['SQLALCHEMY_DATABASE_URI'] = database_uri.replace('postgres://', 'postgresql://')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY') or 'a-very-very-secret-key'
 
+basedir = os.path.abspath('')
+database_uri = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'wiserank.db')
+
+app.config['SQLALCHEMY_DATABASE_URI'] = database_uri.replace('postgres://', 'postgresql://')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+print(os.environ.get('DATABASE_URL'),os.environ.get('DATABASE_CONNECTION_POOL_URL'))
 db.init_app(app)
 migrate = Migrate(app, db)
 db.app = app
