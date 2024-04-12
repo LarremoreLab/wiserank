@@ -13,9 +13,11 @@ from rank_items import individual_ranking
 
 
 app = Flask(__name__)
+app.config['DEBUG'] = True
 CORS(app, resources={r"/*": {"origins": "*"}})
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_CONNECTION_POOL_URL') or 'sqlite:///wiserank.db'
+database_uri = os.environ.get('DATABASE_CONNECTION_POOL_URL') or 'sqlite:///wiserank.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = database_uri.replace('postgres://', 'postgresql://')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
