@@ -1,15 +1,13 @@
 import os
-
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-import models
-from models import db, Journal, User, Session, Selection, Comparison, Movie
-from hasher import hash_string
-from select_item import random_item, rec_item
-from pair_items import random_pair
-from rank_items import individual_ranking
+
+from utils.models import db, Journal, User, Session, Selection, Comparison, Movie
+from utils.hasher import hash_string
+from utils.select_item import rec_item
+from utils.pair_items import random_pair
+from utils.rank_items import individual_ranking
 
 
 app = Flask(__name__)

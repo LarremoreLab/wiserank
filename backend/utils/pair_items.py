@@ -1,6 +1,6 @@
 from itertools import combinations
 import numpy as np
-from models import Journal, Movie
+from .models import Journal, Movie
 
 
 def random_pair(session, db):

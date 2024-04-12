@@ -1,6 +1,6 @@
 import numpy as np
 from SpringRank.SpringRank import SpringRank as sr
-from models import Journal, Movie
+from .models import Journal, Movie
 
 
 def individual_ranking(session, db, alpha=2):
