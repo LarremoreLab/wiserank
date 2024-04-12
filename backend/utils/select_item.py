@@ -3,12 +3,13 @@ import json
 from collections import defaultdict
 from scipy import sparse
 from .models import Journal, Movie
+import os
 
-data_dir = "../data/"
-movie_recs = json.load(open(data_dir+"movie_recs.json","r"))
+data_dir = os.path.abspath(os.path.join(os.path.abspath(''),'..', "data"))
+movie_recs = json.load(open(data_dir+"/movie_recs.json","r"))
 
-journal_recs = [sparse.load_npz(data_dir+'journal_recs_mx.npz'),
-                json.load(open(data_dir+'journal_recs_ids.json','r'))]
+journal_recs = [sparse.load_npz(data_dir+'/journal_recs_mx.npz'),
+                json.load(open(data_dir+'/journal_recs_ids.json','r'))]
 
 
 def random_item(session, db):
