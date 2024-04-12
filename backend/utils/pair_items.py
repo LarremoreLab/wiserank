@@ -5,7 +5,7 @@ from .models import Journal, Movie
 
 def random_pair(session, db):
     # selected = {k.obj_id:k.name for k in session.selections}
-    selected = sorted([k.obj_id for k in session.selections if k.selected is True])
+    selected = sorted([str(k.obj_id) for k in session.selections if k.selected is True])
     all_combinations = set(combinations(selected, 2))
 
     compared = set([tuple(sorted((str(p.win_id),str(p.lose_id)))) for p in session.comparisons])

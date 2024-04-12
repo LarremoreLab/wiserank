@@ -15,7 +15,7 @@ def individual_ranking(session, db, alpha=2):
     selected_names = {int(i.link_id):i.name for i in selected_data}
 
     # fill adjacency matrix
-    a_pos = {k:i for i,k in enumerate(selected)}
+    a_pos = {int(k):i for i,k in enumerate(selected)}
     M = len(selected)
     a_matrix = np.zeros((M,M)).astype(int)
 
