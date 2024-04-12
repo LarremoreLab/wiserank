@@ -21,6 +21,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY') or 'a-very-very-secret-key'
 
 db.init_app(app)
+with app.app_context():
+    db.create_all()
 migrate = Migrate(app, db)
 db.app = app
 app.db = db
@@ -41,9 +43,6 @@ def favicon():
 def load_user():
     post_data = request.get_json()
     email = post_data["email"]
-    print(db.session.scalars(db.select(User)).all())
-    for table in db.metadata.tables.values():
-        print(table.name)
     user = db.session.scalars(db.select(User).filter_by(email=email)).first()
 
     # create new user if none exists
