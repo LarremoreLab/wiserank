@@ -1,8 +1,9 @@
-from utils.models import db, Journal, User, Session, Selection, Comparison, Movie
-from utils.hasher import hash_string
-from utils.select_item import rec_item
-from utils.pair_items import random_pair
-from utils.rank_items import individual_ranking
+from backend.utils.models import Journal, User, Session, Selection, Comparison, Movie
+from backend.utils.database import db
+from backend.utils.hasher import hash_string
+from backend.utils.select_item import rec_item
+from backend.utils.pair_items import random_pair
+from backend.utils.rank_items import individual_ranking
 
 import os
 from flask import Flask, jsonify, request
@@ -13,12 +14,16 @@ app = Flask(__name__)
 app.config['DEBUG'] = True
 CORS(app, resources={r"/*": {"origins": "*"}})
 
-database_uri = os.environ.get('DATABASE_CONNECTION_POOL_URL') or 'sqlite:///wiserank.db'
+basedir = os.path.abspath('')
+database_uri = os.environ.get('DATABASE_CONNECTION_POOL_URL') or 'sqlite:///' + os.path.join(basedir, 'wiserank.db')
 app.config['SQLALCHEMY_DATABASE_URI'] = database_uri.replace('postgres://', 'postgresql://')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY') or 'a-very-very-secret-key'
 
 db.init_app(app)
 migrate = Migrate(app, db)
+db.app = app
+app.db = db
 
 # @app.route('/favicon.ico')
 # def favicon():
@@ -29,6 +34,9 @@ migrate = Migrate(app, db)
 def load_user():
     post_data = request.get_json()
     email = post_data["email"]
+    print(db.session.scalars(db.select(User)).all())
+    for table in db.metadata.tables.values():
+        print(table.name)
     user = db.session.scalars(db.select(User).filter_by(email=email)).first()
 
     # create new user if none exists

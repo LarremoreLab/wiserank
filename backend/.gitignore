@@ -1,4 +1,4 @@
 manage_db.ipynb
 __pycache__/
 .DS_Store
-instance/*
+wiserank.db

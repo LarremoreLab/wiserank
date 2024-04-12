@@ -1,5 +1,5 @@
 import numpy as np
-from SpringRank.SpringRank import SpringRank as sr
+from .SpringRank.SpringRank import SpringRank as sr
 from .models import Journal, Movie
 
 
