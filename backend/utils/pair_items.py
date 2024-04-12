@@ -8,7 +8,7 @@ def random_pair(session, db):
     selected = sorted([k.obj_id for k in session.selections if k.selected is True])
     all_combinations = set(combinations(selected, 2))
 
-    compared = set([tuple(sorted((p.win_id,p.lose_id))) for p in session.comparisons])
+    compared = set([tuple(sorted((str(p.win_id),str(p.lose_id)))) for p in session.comparisons])
     candidates = [c for c in all_combinations if c not in compared]
 
     if len(candidates) > 0:

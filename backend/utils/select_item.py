@@ -15,7 +15,7 @@ journal_recs = [sparse.load_npz(data_dir+'/journal_recs_mx.npz'),
 
 
 def random_item(session, db):
-    selected = set([s.obj_id for s in session.selections])
+    selected = set([str(s.obj_id) for s in session.selections])
     
     for _ in range(100):
         if session.track == "Journals":

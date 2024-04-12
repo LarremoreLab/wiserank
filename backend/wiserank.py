@@ -107,7 +107,7 @@ def submit_load_item():
     session = db.session.scalars(db.select(Session).filter_by(id=sess_id)).first()
     new = rec_item(session, db)
 
-    selected = [k.obj_id for k in session.selections if k.selected is True]
+    selected = [str(k.obj_id) for k in session.selections if k.selected is True]
     if session.track == "Journals":
         table = Journal
     elif session.track == "Movies":

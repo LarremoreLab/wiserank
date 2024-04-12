@@ -4,7 +4,7 @@ from .models import Journal, Movie
 
 
 def individual_ranking(session, db, alpha=2):
-    selected = [s.obj_id for s in session.selections if s.selected is True]
+    selected = [str(s.obj_id) for s in session.selections if s.selected is True]
     comparisons = [(p.win_id,p.lose_id,p.tie) for p in session.comparisons]
 
     if session.track == "Journals":
