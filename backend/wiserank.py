@@ -10,7 +10,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from flask_migrate import Migrate
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='../frontend/dist/',    static_url_path='/')
 app.config['DEBUG'] = True
 CORS(app, resources={r"/*": {"origins": "*"}})
 
@@ -25,9 +25,16 @@ migrate = Migrate(app, db)
 db.app = app
 app.db = db
 
-# @app.route('/favicon.ico')
-# def favicon():
-#     return app.send_static_file('favicon.ico')
+@app.route('/', defaults={'path': ''})
+@app.route("/<string:path>")
+@app.route('/<path:path>')
+def index(path):
+    return app.send_static_file('index.html')
+
+
+@app.route('/favicon.ico')
+def favicon():
+    return app.send_static_file('favicon.ico')
 
 
 @app.route('/loaduser', methods=['POST'])
