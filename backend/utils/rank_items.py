@@ -5,17 +5,19 @@ from .models import Journal, Movie
 
 def individual_ranking(session, db, alpha=2):
     selected = [str(s.obj_id) for s in session.selections if s.selected is True]
-    comparisons = [(p.win_id,p.lose_id,p.tie) for p in session.comparisons]
+    comparisons = [(str(p.win_id),
+                    str(p.lose_id),
+                    p.tie) for p in session.comparisons]
 
     if session.track == "Journals":
         selected_data = db.session.scalars(db.select(Journal).filter(Journal.link_id.in_(selected))).all()
     elif session.track == "Movies":
         selected_data = db.session.scalars(db.select(Movie).filter(Movie.link_id.in_(selected))).all()
 
-    selected_names = {int(i.link_id):i.name for i in selected_data}
+    selected_names = {str(i.link_id):i.name for i in selected_data}
 
     # fill adjacency matrix
-    a_pos = {int(k):i for i,k in enumerate(selected)}
+    a_pos = {str(k):i for i,k in enumerate(selected)}
     M = len(selected)
     a_matrix = np.zeros((M,M)).astype(int)
 
@@ -40,5 +42,5 @@ def individual_ranking(session, db, alpha=2):
     scaled_ranks = user_ranks # sr.scale_ranks(user_ranks,scaling_factor)
 
     # store in dictionary
-    user_ranking = sorted([(k,scaled_ranks[i],selected_names[k]) for k,i in a_pos.items()], key = lambda x:x[1], reverse=True)
+    user_ranking = sorted([(int(k),scaled_ranks[i],selected_names[k]) for k,i in a_pos.items()], key = lambda x:x[1], reverse=True)
     return user_ranking
