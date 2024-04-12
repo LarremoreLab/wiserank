@@ -48,7 +48,7 @@ def rec_journal(session,db):
             continue
     if len(distribution) > 0:
         top_id,_ = sorted([(x,y) for x,y in distribution.items()], key = lambda _:_[1],reverse=True)[0]
-        candidate = db.session.scalars(db.select(Journal).filter_by(link_id=top_id)).first()
+        candidate = db.session.scalars(db.select(Journal).filter_by(link_id=str(top_id))).first()
         return {"link_id": candidate.link_id, "name":candidate.name}
     else:
         return random_item(session, db)
@@ -67,7 +67,7 @@ def rec_movie(session, db):
     
     if len(distribution) > 0:
         top_id,_ = sorted([(x,y) for x,y in distribution.items()], key = lambda _:_[1],reverse=True)[0]
-        candidate = db.session.scalars(db.select(Movie).filter_by(link_id=top_id)).first()
+        candidate = db.session.scalars(db.select(Movie).filter_by(link_id=str(top_id))).first()
         return {"link_id": candidate.link_id, "name":candidate.name}
     else:
         return random_item(session, db)
