@@ -6,6 +6,8 @@ from .models import Journal, Movie
 import os
 
 data_dir = os.path.abspath(os.path.join(os.path.abspath(''),'..', "data"))
+if os.environ.get('DYNO'):
+    data_dir = "/app" + data_dir
 movie_recs = json.load(open(data_dir+"/movie_recs.json","r"))
 
 journal_recs = [sparse.load_npz(data_dir+'/journal_recs_mx.npz'),
