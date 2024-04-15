@@ -4,7 +4,7 @@
     <div>
         <h4>Compare Items:</h4>
     </div>
-    <div>
+    <div v-if="isPair">
       <button @click="submit_and_load_pair(0)">1.</button>
       <button @click="submit_and_load_pair(1)">2.</button>
       <div>
@@ -29,6 +29,7 @@ export default {
     return {
       pair: [{"link_id": -1,"name":""},{"link_id": -2,"name":""}],
       loaded: false,
+      isPair: false,
     };
   },
   mounted() {
@@ -40,6 +41,7 @@ export default {
       axios.post(process.env.VUE_APP_API_URL+"/submitloadpair", payload)
         .then(response => {
             this.pair = response.data.new;
+            this.isPair = this.pair[0]["name"] !== ""
             this.loaded = true
         })
         .catch(error => {

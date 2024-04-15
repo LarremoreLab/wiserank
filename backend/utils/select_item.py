@@ -2,7 +2,7 @@ import sqlalchemy
 import json
 from collections import defaultdict
 from scipy import sparse
-from .models import Journal, Movie
+from .models import Journal, Movie, SoccerPlayer
 import os
 
 data_dir = os.path.abspath(os.path.join(os.path.abspath(''),'..', "data"))
@@ -22,7 +22,9 @@ def random_item(session, db):
             candidate = db.session.scalars(db.select(Journal).order_by(sqlalchemy.func.random()).limit(1)).first()
         elif session.track == "Movies":
             candidate = db.session.scalars(db.select(Movie).order_by(sqlalchemy.func.random()).limit(1)).first()
-        
+        elif session.track == "SoccerPlayers":
+            candidate = db.session.scalars(db.select(SoccerPlayer).order_by(sqlalchemy.func.random()).limit(1)).first()
+
         if candidate.link_id not in selected:
             return {"link_id": candidate.link_id, "name":candidate.name}
     return {"link_id": -1, "name":"--INTERNAL ERROR PLEASE REFRESH PAGE--"}
