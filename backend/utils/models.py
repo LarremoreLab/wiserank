@@ -79,5 +79,12 @@ class SoccerPlayer(db.Model):
     name = db.Column(db.String(240))
     extra = db.Column(db.String(240))
 
+
+class Stock(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    link_id = db.Column(db.String(16))
+    name = db.Column(db.String(240))
+    extra = db.Column(db.String(240))
+
     def __repr__(self):
         return '<{}>'.format(self.name)

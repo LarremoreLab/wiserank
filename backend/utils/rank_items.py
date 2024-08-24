@@ -1,6 +1,6 @@
 import numpy as np
 from .SpringRank.SpringRank import SpringRank as sr
-from .models import Journal, Movie, SoccerPlayer
+from .models import Journal, Movie, SoccerPlayer, Stock
 
 
 def individual_ranking(session, db, alpha=2):
@@ -17,6 +17,9 @@ def individual_ranking(session, db, alpha=2):
         selected_names = {str(i.link_id):i.name for i in selected_data}
     elif session.track == "SoccerPlayers":
         selected_data = db.session.scalars(db.select(SoccerPlayer).filter(SoccerPlayer.link_id.in_(selected))).all()
+        selected_names = {str(i.link_id):i.name+" "+i.extra for i in selected_data}
+    elif session.track == "Stocks":
+        selected_data = db.session.scalars(db.select(Stock).filter(Stock.link_id.in_(selected))).all()
         selected_names = {str(i.link_id):i.name+" "+i.extra for i in selected_data}
 
     # fill adjacency matrix

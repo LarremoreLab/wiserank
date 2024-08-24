@@ -1,6 +1,6 @@
 from itertools import combinations
 import numpy as np
-from .models import Journal, Movie, SoccerPlayer
+from .models import Journal, Movie, SoccerPlayer, Stock
 
 
 def random_pair(session, db):
@@ -20,6 +20,8 @@ def random_pair(session, db):
             pair = db.session.scalars(db.select(Movie).filter(Movie.link_id.in_(pair_ids))).all()
         elif session.track == "SoccerPlayers":
             pair = db.session.scalars(db.select(SoccerPlayer).filter(SoccerPlayer.link_id.in_(pair_ids))).all()
+        elif session.track == "Stocks":
+            pair = db.session.scalars(db.select(Stock).filter(Stock.link_id.in_(pair_ids))).all()
         pair_names = {str(i.link_id):i.name for i in pair}
         random_i = np.random.randint(2)
         return ([{'link_id':pair_ids[random_i],
