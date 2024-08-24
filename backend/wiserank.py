@@ -95,7 +95,8 @@ def submit_load_item():
 
     # submit item if necessary
     link_id = int(item['link_id'])
-    if link_id != -1 and link_id not in selected:
+    if link_id != -1:
+        # adds new entry for item as selected even if item was added as rejected previously to keep a record of user behavior
         s = Selection(session_id=sess_id,
                       obj_id=link_id,
                       selected=bool(selection)
