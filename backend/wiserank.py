@@ -1,4 +1,4 @@
-from backend.utils.models import User, Session, Selection, Comparison, Journal, Movie, SoccerPlayer, Stock
+from backend.utils.models import User, Session, Selection, Comparison, Item
 from backend.utils.database import db
 from backend.utils.hasher import hash_string
 from backend.utils.select_item import rec_item
@@ -110,14 +110,15 @@ def submit_load_item():
     new = rec_item(session, db)
 
     selected = [str(k.obj_id) for k in session.selections if k.selected is True]
-    if session.track == "Journals":
-        table = Journal
-    elif session.track == "Movies":
-        table = Movie
-    elif session.track == "SoccerPlayers":
-        table = SoccerPlayer
-    elif session.track == "Stocks":
-        table = Stock
+    table = Item
+    # if session.track == "Journals":
+    #     table = Journal
+    # elif session.track == "Movies":
+    #     table = Movie
+    # elif session.track == "SoccerPlayers":
+    #     table = SoccerPlayer
+    # elif session.track == "Stocks":
+    #     table = Stock
 
     select_times = {i.obj_id:i.created_on for i in session.selections}
     selected_data = db.session.scalars(db.select(table).filter(table.link_id.in_(selected))).all()
@@ -131,14 +132,15 @@ def search_items():
     post_data = request.get_json()
     sess_id = post_data["sessionID"]
     session = db.session.scalars(db.select(Session).filter_by(id=sess_id)).first()
-    if session.track == "Journals":
-        table = Journal
-    elif session.track == "Movies":
-        table = Movie
-    elif session.track == "SoccerPlayers":
-        table = SoccerPlayer
-    elif session.track == "Stocks":
-        table = Stock
+    table = Item
+    # if session.track == "Journals":
+    #     table = Journal
+    # elif session.track == "Movies":
+    #     table = Movie
+    # elif session.track == "SoccerPlayers":
+    #     table = SoccerPlayer
+    # elif session.track == "Stocks":
+    #     table = Stock
     items = db.session.scalars(db.select(table).filter(table.name.ilike("%" + post_data['string'] + "%")).limit(50)).all()
     return jsonify(sorted([[j.link_id,j.name] for j in items], key = lambda x:len(x[1]))[:10])
 

@@ -56,7 +56,7 @@ class Item(db.Model):
     link_id = db.Column(db.String(16))
     track = db.Column(db.String(64)) # stock, soccerPlayer, movie, journal
     name = db.Column(db.String(240))
-    extra = db.Column(db.String(240))
+    meta = db.Column(db.String(240))
 
     def __repr__(self):
         return '<{}: {}>'.format(self.track, self.name)
