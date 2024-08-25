@@ -1,6 +1,7 @@
 import numpy as np
 from .SpringRank.SpringRank import SpringRank as sr
 from .models import Item
+from sqlalchemy import and_
 
 
 def individual_ranking(session, db, alpha=2):
@@ -8,19 +9,11 @@ def individual_ranking(session, db, alpha=2):
     comparisons = [(str(p.win_id),
                     str(p.lose_id),
                     p.tie) for p in session.comparisons]
-
-    if session.track == "Journal":
-        selected_data = db.session.scalars(db.select(Item).filter(Item.link_id.in_(selected))).all()
-        selected_names = {str(i.link_id):i.name for i in selected_data}
-    elif session.track == "Movie":
-        selected_data = db.session.scalars(db.select(Item).filter(Item.link_id.in_(selected))).all()
-        selected_names = {str(i.link_id):i.name for i in selected_data}
-    elif session.track == "SoccerPlayer":
-        selected_data = db.session.scalars(db.select(Item).filter(Item.link_id.in_(selected))).all()
-        selected_names = {str(i.link_id):i.name+" "+i.extra for i in selected_data}
-    elif session.track == "Stock":
-        selected_data = db.session.scalars(db.select(Item).filter(Item.link_id.in_(selected))).all()
-        selected_names = {str(i.link_id):i.name+" "+i.extra for i in selected_data}
+    selected_data = db.session.scalars(db.select(Item).filter(and_(
+                                                        Item.track == session.track,
+                                                        Item.link_id.in_(selected)
+                                                        ))).all()
+    selected_names = {str(i.link_id):i.name+" "+i.meta for i in selected_data}
 
     # fill adjacency matrix
     a_pos = {str(k):i for i,k in enumerate(selected)}

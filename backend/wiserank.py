@@ -67,7 +67,6 @@ def load_user():
 @app.route('/loadsessions', methods=['POST'])
 def load_sessions():
     options = [file.split(".")[0] for file in os.listdir(data_dir+"/parsed")]
-    # journals = db.session.scalars(db.select(Journal).limit(10))
     return jsonify(options=options)
 
 
