@@ -3,6 +3,12 @@ from .SpringRank.SpringRank import SpringRank as sr
 from .models import Item
 from sqlalchemy import and_
 
+def format_name(i):
+    if i.meta is not None and i.meta != "":
+        return i.name+" ("+i.meta+")"
+    else:
+        return i.name
+
 
 def individual_ranking(session, db, alpha=2):
     selected = [str(s.obj_id) for s in session.selections if s.selected is True]
@@ -13,7 +19,7 @@ def individual_ranking(session, db, alpha=2):
                                                         Item.track == session.track,
                                                         Item.link_id.in_(selected)
                                                         ))).all()
-    selected_names = {str(i.link_id):i.name+" "+i.meta for i in selected_data}
+    selected_names = {str(i.link_id):format_name(i) for i in selected_data}
 
     # fill adjacency matrix
     a_pos = {str(k):i for i,k in enumerate(selected)}

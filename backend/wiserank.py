@@ -10,6 +10,8 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from flask_migrate import Migrate
 
+from sqlalchemy import and_
+
 data_dir = os.path.abspath(os.path.join(os.path.abspath(''),'..', "data"))
 if os.environ.get('DYNO'):
     data_dir = "/app" + data_dir
@@ -124,7 +126,10 @@ def submit_load_item():
     #     table = Stock
 
     select_times = {i.obj_id:i.created_on for i in session.selections}
-    selected_data = db.session.scalars(db.select(table).filter(table.link_id.in_(selected))).all()
+    selected_data = db.session.scalars(db.select(Item).filter(and_(
+                                                            Item.track == session.track,
+                                                            Item.link_id.in_(selected)
+                                                            ))).all()
     s = sorted([(i.link_id, i.name) for i in selected_data], key = lambda x:select_times[int(x[0])])
 
     return jsonify(new=new,selected=s)
@@ -135,16 +140,11 @@ def search_items():
     post_data = request.get_json()
     sess_id = post_data["sessionID"]
     session = db.session.scalars(db.select(Session).filter_by(id=sess_id)).first()
-    table = Item
-    # if session.track == "Journals":
-    #     table = Journal
-    # elif session.track == "Movies":
-    #     table = Movie
-    # elif session.track == "SoccerPlayers":
-    #     table = SoccerPlayer
-    # elif session.track == "Stocks":
-    #     table = Stock
-    items = db.session.scalars(db.select(table).filter(table.name.ilike("%" + post_data['string'] + "%")).limit(50)).all()
+
+    items = db.session.scalars(db.select(Item).filter(and_(
+                                                        Item.track == session.track,
+                                                        Item.name.ilike("%" + post_data['string'] + "%")
+                                                        )).limit(50)).all()
     return jsonify(sorted([[j.link_id,j.name] for j in items], key = lambda x:len(x[1]))[:10])
 
 

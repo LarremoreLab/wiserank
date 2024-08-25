@@ -68,7 +68,7 @@ def load_items():
             session.add(models.Item(track=row["track"],
                                     link_id=row["link_id"],
                                     name=row["name"],
-                                    meta=row["meta"]
+                                    meta=row.get("meta","")
                                     ))
     session.commit()
 
