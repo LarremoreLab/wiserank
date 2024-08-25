@@ -10,6 +10,10 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from flask_migrate import Migrate
 
+data_dir = os.path.abspath(os.path.join(os.path.abspath(''),'..', "data"))
+if os.environ.get('DYNO'):
+    data_dir = "/app" + data_dir
+
 app = Flask(__name__, static_folder='../frontend/dist/',    static_url_path='/')
 app.config['DEBUG'] = True
 CORS(app, resources={r"/*": {"origins": "*"}})
@@ -62,7 +66,7 @@ def load_user():
 
 @app.route('/loadsessions', methods=['POST'])
 def load_sessions():
-    options = ["Journals", "Movies", "SoccerPlayers", "Stocks"]
+    options = [file.split(".")[0] for file in os.listdir(data_dir+"/parsed")]
     # journals = db.session.scalars(db.select(Journal).limit(10))
     return jsonify(options=options)
 
