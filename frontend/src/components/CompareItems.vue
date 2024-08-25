@@ -5,8 +5,8 @@
         <h4>Compare Items:</h4>
     </div>
     <div v-if="isPair">
-      <button @click="submit_and_load_pair(0)">1.</button>
-      <button @click="submit_and_load_pair(1)">2.</button>
+      <button id="leftItem" @click="submit_and_load_pair(0)">&larr; 1.</button>
+      <button id="rightItem" @click="submit_and_load_pair(1)">2. &rarr;</button>
       <div>
       <ol>
         <li v-for="i in pair" :key="i.link_id">
@@ -34,6 +34,10 @@ export default {
   },
   mounted() {
     this.submit_and_load_pair()
+    window.addEventListener('keydown', this.handleKeydown);
+  },
+  unmounted() {
+    window.removeEventListener('keydown', this.handleKeydown);
   },
   methods: {
     submit_and_load_pair(selection=0){
@@ -47,7 +51,21 @@ export default {
         .catch(error => {
             console.error('Error:', error);
         });
-    }
+    },
+    handleKeydown(event) {
+      if (event.key === 'ArrowLeft') {
+        const button = document.querySelector('#leftItem');
+        if (button) {
+          button.click();
+        }      
+      }
+      if (event.key === 'ArrowRight') {
+        const button = document.querySelector('#rightItem');
+        if (button) {
+          button.click();
+        }      
+      }
+    },
   }
 };
 </script>
