@@ -1,10 +1,10 @@
 from itertools import combinations
 import numpy as np
 from .models import Item
+from sqlalchemy import and_
 
 
 def random_pair(session, db):
-    # selected = {k.obj_id:k.name for k in session.selections}
     selected = sorted([str(k.obj_id) for k in session.selections if k.selected is True])
     all_combinations = set(combinations(selected, 2))
 
@@ -14,14 +14,10 @@ def random_pair(session, db):
 
     if len(candidates) > 0:
         pair_ids = candidates[np.random.randint(0,len(candidates))]
-        if session.track == "Journal":
-            pair = db.session.scalars(db.select(Item).filter(Item.link_id.in_(pair_ids))).all()
-        elif session.track == "Movie":
-            pair = db.session.scalars(db.select(Item).filter(Item.link_id.in_(pair_ids))).all()
-        elif session.track == "SoccerPlayer":
-            pair = db.session.scalars(db.select(Item).filter(Item.link_id.in_(pair_ids))).all()
-        elif session.track == "Stock":
-            pair = db.session.scalars(db.select(Item).filter(Item.link_id.in_(pair_ids))).all()
+        pair = db.session.scalars(db.select(Item).filter(and_(
+                                                            Item.track == session.track,
+                                                            Item.link_id.in_(pair_ids)
+                                                            ))).all()
         pair_names = {str(i.link_id):i.name for i in pair}
         random_i = np.random.randint(2)
         return ([{'link_id':pair_ids[random_i],
