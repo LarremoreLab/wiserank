@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input v-model="email" type="text" placeholder="email">
+    <input v-model="email" type="text" placeholder="email or username">
     <button @click="loadUser">Create or Load Profile</button>
   </div>
 </template>

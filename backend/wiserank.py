@@ -50,7 +50,11 @@ def favicon():
 def load_user():
     post_data = request.get_json()
     email = post_data["email"]
-    user = db.session.scalars(db.select(User).filter_by(email=email)).first()
+    if email == "":
+        hash = post_data["hash"]
+        user = db.session.scalars(db.select(User).filter_by(hash=hash)).first()
+    else:
+        user = db.session.scalars(db.select(User).filter_by(email=email)).first()
 
     # create new user if none exists
     if user is None:

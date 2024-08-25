@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-show="loaded">
     <div>
       <h4>Start a New Session:</h4>
       <div v-for="j in options" :key="j" class="newSession">
@@ -24,12 +24,14 @@ export default {
     return {
     name: 'SessionDashboard',
     options: [],
+    loaded: false
     };
   },
   mounted() {
     axios.post(process.env.VUE_APP_API_URL+"/loadsessions", {"sessions":this.sessions,})
         .then(response => {
             this.options = response.data.options;
+            this.loaded = true
         })
         .catch(error => {
             console.error('Error:', error);
