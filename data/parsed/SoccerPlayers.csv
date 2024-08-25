@@ -1,0 +1,501 @@
+track,link_id,name,meta
+SoccerPlayers,0,Jude Bellingham,€180m
+SoccerPlayers,1,Erling Haaland,€180m
+SoccerPlayers,2,Kylian Mbappé,€180m
+SoccerPlayers,3,Vinicius Junior,€150m
+SoccerPlayers,4,Bukayo Saka,€130m
+SoccerPlayers,5,Phil Foden,€130m
+SoccerPlayers,6,Florian Wirtz,€110m
+SoccerPlayers,7,Jamal Musiala,€110m
+SoccerPlayers,8,Lautaro Martínez,€110m
+SoccerPlayers,9,Victor Osimhen,€110m
+SoccerPlayers,10,Declan Rice,€110m
+SoccerPlayers,11,Rodri,€110m
+SoccerPlayers,12,Harry Kane,€110m
+SoccerPlayers,13,Rodrygo,€100m
+SoccerPlayers,14,Federico Valverde,€100m
+SoccerPlayers,15,Martin Ødegaard,€95m
+SoccerPlayers,16,Gavi,€90m
+SoccerPlayers,17,Eduardo Camavinga,€90m
+SoccerPlayers,18,Julián Álvarez,€90m
+SoccerPlayers,19,Aurélien Tchouaméni,€90m
+SoccerPlayers,20,Rafael Leão,€90m
+SoccerPlayers,21,Bruno Guimarães,€85m
+SoccerPlayers,22,Moisés Caicedo,€80m
+SoccerPlayers,23,Pedri,€80m
+SoccerPlayers,24,Gabriel Martinelli,€80m
+SoccerPlayers,25,Enzo Fernández,€80m
+SoccerPlayers,26,Xavi Simons,€80m
+SoccerPlayers,27,Khvicha Kvaratskhelia,€80m
+SoccerPlayers,28,William Saliba,€80m
+SoccerPlayers,29,Rúben Dias,€80m
+SoccerPlayers,30,Bernardo Silva,€80m
+SoccerPlayers,31,Lamine Yamal,€75m
+SoccerPlayers,32,Luis Díaz,€75m
+SoccerPlayers,33,Josko Gvardiol,€75m
+SoccerPlayers,34,Dominik Szoboszlai,€75m
+SoccerPlayers,35,Nicolò Barella,€75m
+SoccerPlayers,36,Darwin Núñez,€70m
+SoccerPlayers,37,Alexis Mac Allister,€70m
+SoccerPlayers,38,Ronald Araujo,€70m
+SoccerPlayers,39,Douglas Luiz,€70m
+SoccerPlayers,40,Éder Militão,€70m
+SoccerPlayers,41,Gabriel Jesus,€70m
+SoccerPlayers,42,Alexander Isak,€70m
+SoccerPlayers,43,Christopher Nkunku,€70m
+SoccerPlayers,44,Frenkie de Jong,€70m
+SoccerPlayers,45,Alessandro Bastoni,€70m
+SoccerPlayers,46,Trent Alexander-Arnold,€70m
+SoccerPlayers,47,James Maddison,€70m
+SoccerPlayers,48,Bruno Fernandes,€70m
+SoccerPlayers,49,Leroy Sané,€70m
+SoccerPlayers,50,Rasmus Højlund,€65m
+SoccerPlayers,51,Jérémy Doku,€65m
+SoccerPlayers,52,Lucas Paquetá,€65m
+SoccerPlayers,53,Gabriel Magalhães,€65m
+SoccerPlayers,54,Achraf Hakimi,€65m
+SoccerPlayers,55,Dušan Vlahović,€65m
+SoccerPlayers,56,Matthijs de Ligt,€65m
+SoccerPlayers,57,Ollie Watkins,€65m
+SoccerPlayers,58,Kingsley Coman,€65m
+SoccerPlayers,59,Jack Grealish,€65m
+SoccerPlayers,60,Mohamed Salah,€65m
+SoccerPlayers,61,Warren Zaïre-Emery,€60m
+SoccerPlayers,62,Evan Ferguson,€60m
+SoccerPlayers,63,Nuno Mendes,€60m
+SoccerPlayers,64,Bremer,€60m
+SoccerPlayers,65,Randal Kolo Muani,€60m
+SoccerPlayers,66,Manuel Ugarte,€60m
+SoccerPlayers,67,Alphonso Davies,€60m
+SoccerPlayers,68,Takefusa Kubo,€60m
+SoccerPlayers,69,Loïs Openda,€60m
+SoccerPlayers,70,Cristian Romero,€60m
+SoccerPlayers,71,Theo Hernández,€60m
+SoccerPlayers,72,Marcus Thuram,€60m
+SoccerPlayers,73,Kai Havertz,€60m
+SoccerPlayers,74,Ousmane Dembélé,€60m
+SoccerPlayers,75,Marcus Rashford,€60m
+SoccerPlayers,76,Joshua Kimmich,€60m
+SoccerPlayers,77,Kevin De Bruyne,€60m
+SoccerPlayers,78,Endrick,€55m
+SoccerPlayers,79,Cole Palmer,€55m
+SoccerPlayers,80,Min-jae Kim,€55m
+SoccerPlayers,81,Pedro Neto,€55m
+SoccerPlayers,82,Dejan Kulusevski,€55m
+SoccerPlayers,83,Moussa Diaby,€55m
+SoccerPlayers,84,Ben White,€55m
+SoccerPlayers,85,Viktor Gyökeres,€55m
+SoccerPlayers,86,João Palhinha,€55m
+SoccerPlayers,87,Marquinhos,€55m
+SoccerPlayers,88,Nico Williams,€50m
+SoccerPlayers,89,Levi Colwill,€50m
+SoccerPlayers,90,Matheus Nunes,€50m
+SoccerPlayers,91,Michael Olise,€50m
+SoccerPlayers,92,Micky van de Ven,€50m
+SoccerPlayers,93,Gonçalo Ramos,€50m
+SoccerPlayers,94,Mohammed Kudus,€50m
+SoccerPlayers,95,Jonathan David,€50m
+SoccerPlayers,96,Anthony Gordon,€50m
+SoccerPlayers,97,Amadou Onana,€50m
+SoccerPlayers,98,Jeremie Frimpong,€50m
+SoccerPlayers,99,Reece James,€50m
+SoccerPlayers,100,Cody Gakpo,€50m
+SoccerPlayers,101,Martín Zubimendi,€50m
+SoccerPlayers,102,Jules Koundé,€50m
+SoccerPlayers,103,Raphinha,€50m
+SoccerPlayers,104,Benjamin Pavard,€50m
+SoccerPlayers,105,Mikel Oyarzabal,€50m
+SoccerPlayers,106,Dayot Upamecano,€50m
+SoccerPlayers,107,Diogo Jota,€50m
+SoccerPlayers,108,Mikel Merino,€50m
+SoccerPlayers,109,Jarrod Bowen,€50m
+SoccerPlayers,110,Dani Olmo,€50m
+SoccerPlayers,111,Ivan Toney,€50m
+SoccerPlayers,112,Federico Dimarco,€50m
+SoccerPlayers,113,Heung-min Son,€50m
+SoccerPlayers,114,Conor Gallagher,€48m
+SoccerPlayers,115,Eberechi Eze,€48m
+SoccerPlayers,116,Brennan Johnson,€48m
+SoccerPlayers,117,João Neves,€45m
+SoccerPlayers,118,António Silva,€45m
+SoccerPlayers,119,João Pedro,€45m
+SoccerPlayers,120,Giorgio Scalvini,€45m
+SoccerPlayers,121,Destiny Udogie,€45m
+SoccerPlayers,122,Pedro Porro,€45m
+SoccerPlayers,123,Santiago Gimenez,€45m
+SoccerPlayers,124,Kaoru Mitoma,€45m
+SoccerPlayers,125,Vitinha,€45m
+SoccerPlayers,126,Lisandro Martínez,€45m
+SoccerPlayers,127,Pau Torres,€45m
+SoccerPlayers,128,Sven Botman,€45m
+SoccerPlayers,129,Diogo Costa,€45m
+SoccerPlayers,130,Ibrahima Konaté,€45m
+SoccerPlayers,131,Lucas Hernández,€45m
+SoccerPlayers,132,Alejandro Grimaldo,€45m
+SoccerPlayers,133,Serge Gnabry,€45m
+SoccerPlayers,134,Raheem Sterling,€45m
+SoccerPlayers,135,Neymar,€45m
+SoccerPlayers,136,Matheus Cunha,€42m
+SoccerPlayers,137,Jacob Ramsey,€42m
+SoccerPlayers,138,Axel Disasi,€42m
+SoccerPlayers,139,Joelinton,€42m
+SoccerPlayers,140,Manuel Akanji,€42m
+SoccerPlayers,141,Oleksandr Zinchenko,€42m
+SoccerPlayers,142,Samu Omorodion,€40m
+SoccerPlayers,143,Ousmane Diomande,€40m
+SoccerPlayers,144,Vitor Roque,€40m
+SoccerPlayers,145,Leny Yoro,€40m
+SoccerPlayers,146,Alejandro Garnacho,€40m
+SoccerPlayers,147,Mathys Tel,€40m
+SoccerPlayers,148,Sávio,€40m
+SoccerPlayers,149,Bradley Barcola,€40m
+SoccerPlayers,150,Victor Boniface,€40m
+SoccerPlayers,151,Alejandro Balde,€40m
+SoccerPlayers,152,Roméo Lavia,€40m
+SoccerPlayers,153,Benjamin Sesko,€40m
+SoccerPlayers,154,Castello Lukeba,€40m
+SoccerPlayers,155,Pape Matar Sarr,€40m
+SoccerPlayers,156,Johan Bakayoko,€40m
+SoccerPlayers,157,Edmond Tapsoba,€40m
+SoccerPlayers,158,Gonçalo Inácio,€40m
+SoccerPlayers,159,Nicolás González,€40m
+SoccerPlayers,160,Joshua Zirkzee,€40m
+SoccerPlayers,161,Morgan Gibbs-White,€40m
+SoccerPlayers,162,Jurrien Timber,€40m
+SoccerPlayers,163,Exequiel Palacios,€40m
+SoccerPlayers,164,Sandro Tonali,€40m
+SoccerPlayers,165,Richarlison,€40m
+SoccerPlayers,166,Teun Koopmeiners,€40m
+SoccerPlayers,167,Robin Le Normand,€40m
+SoccerPlayers,168,Mason Mount,€40m
+SoccerPlayers,169,Federico Chiesa,€40m
+SoccerPlayers,170,Donyell Malen,€40m
+SoccerPlayers,171,Gianluigi Donnarumma,€40m
+SoccerPlayers,172,Brais Méndez,€40m
+SoccerPlayers,173,Fikayo Tomori,€40m
+SoccerPlayers,174,Serhou Guirassy,€40m
+SoccerPlayers,175,Gregor Kobel,€40m
+SoccerPlayers,176,Ederson,€40m
+SoccerPlayers,177,André Onana,€40m
+SoccerPlayers,178,Rúben Neves,€40m
+SoccerPlayers,179,Milan Skriniar,€40m
+SoccerPlayers,180,Andreas Christensen,€40m
+SoccerPlayers,181,Julian Brandt,€40m
+SoccerPlayers,182,Adrien Rabiot,€40m
+SoccerPlayers,183,Mike Maignan,€40m
+SoccerPlayers,184,Nathan Aké,€40m
+SoccerPlayers,185,Hakan Çalhanoğlu,€40m
+SoccerPlayers,186,Rico Lewis,€38m
+SoccerPlayers,187,Bryan Mbeumo,€38m
+SoccerPlayers,188,Boubacar Kamara,€38m
+SoccerPlayers,189,Marc Guéhi,€38m
+SoccerPlayers,190,Nayef Aguerd,€38m
+SoccerPlayers,191,John Stones,€38m
+SoccerPlayers,192,Leandro Trossard,€38m
+SoccerPlayers,193,Kobbie Mainoo,€35m
+SoccerPlayers,194,Nicolas Jackson,€35m
+SoccerPlayers,195,Mohamed Simakan,€35m
+SoccerPlayers,196,Piero Hincapié,€35m
+SoccerPlayers,197,Elye Wahi,€35m
+SoccerPlayers,198,Odilon Kossounou,€35m
+SoccerPlayers,199,Jean-Clair Todibo,€35m
+SoccerPlayers,200,Oihan Sancet,€35m
+SoccerPlayers,201,Harvey Elliott,€35m
+SoccerPlayers,202,Cheick Doucouré,€35m
+SoccerPlayers,203,Mykhaylo Mudryk,€35m
+SoccerPlayers,204,Max Kilman,€35m
+SoccerPlayers,205,Tino Livramento,€35m
+SoccerPlayers,206,Giorgi Mamardashvili,€35m
+SoccerPlayers,207,Ryan Gravenberch,€35m
+SoccerPlayers,208,Khéphren Thuram,€35m
+SoccerPlayers,209,Curtis Jones,€35m
+SoccerPlayers,210,Nahuel Molina,€35m
+SoccerPlayers,211,Ezri Konsa,€35m
+SoccerPlayers,212,Yves Bissouma,€35m
+SoccerPlayers,213,Dávid Hancko,€35m
+SoccerPlayers,214,Edson Álvarez,€35m
+SoccerPlayers,215,Ferran Torres,€35m
+SoccerPlayers,216,Harvey Barnes,€35m
+SoccerPlayers,217,Leon Bailey,€35m
+SoccerPlayers,218,Diogo Dalot,€35m
+SoccerPlayers,219,Rodrigo Bentancur,€35m
+SoccerPlayers,220,Ismaël Bennacer,€35m
+SoccerPlayers,221,Pervis Estupiñán,€35m
+SoccerPlayers,222,Joe Willock,€35m
+SoccerPlayers,223,Tammy Abraham,€35m
+SoccerPlayers,224,Brahim Díaz,€35m
+SoccerPlayers,225,Guglielmo Vicario,€35m
+SoccerPlayers,226,Tomas Soucek,€35m
+SoccerPlayers,227,Sergej Milinković-Savić,€35m
+SoccerPlayers,228,David Raya,€35m
+SoccerPlayers,229,Joachim Andersen,€35m
+SoccerPlayers,230,Dominic Solanke,€35m
+SoccerPlayers,231,Andrew Robertson,€35m
+SoccerPlayers,232,Fabinho,€35m
+SoccerPlayers,233,Luke Shaw,€35m
+SoccerPlayers,234,James Ward-Prowse,€35m
+SoccerPlayers,235,Manuel Locatelli,€33m
+SoccerPlayers,236,Malo Gusto,€32m
+SoccerPlayers,237,Rayan Aït-Nouri,€32m
+SoccerPlayers,238,Wesley Fofana,€32m
+SoccerPlayers,239,Benoît Badiashile,€32m
+SoccerPlayers,240,Lutsharel Geertruida,€32m
+SoccerPlayers,241,Joey Veerman,€32m
+SoccerPlayers,242,Ibrahim Sangaré,€32m
+SoccerPlayers,243,Scott McTominay,€32m
+SoccerPlayers,244,Christian Pulisic,€32m
+SoccerPlayers,245,Virgil van Dijk,€32m
+SoccerPlayers,246,Alisson,€32m
+SoccerPlayers,247,Arthur Vermeeren,€30m
+SoccerPlayers,248,Kenan Yıldız,€30m
+SoccerPlayers,249,Evanilson,€30m
+SoccerPlayers,250,Gabri Veiga,€30m
+SoccerPlayers,251,Willian Pacho,€30m
+SoccerPlayers,252,Jarrad Branthwaite,€30m
+SoccerPlayers,253,Simon Adingra,€30m
+SoccerPlayers,254,Éderson,€30m
+SoccerPlayers,255,Aaron Hickey,€30m
+SoccerPlayers,256,Enzo Millot,€30m
+SoccerPlayers,257,Yéremy Pino,€30m
+SoccerPlayers,258,Malick Thiaw,€30m
+SoccerPlayers,259,Folarin Balogun,€30m
+SoccerPlayers,260,Ian Maatsen,€30m
+SoccerPlayers,261,Kiernan Dewsbury-Hall,€30m
+SoccerPlayers,262,Ansu Fati,€30m
+SoccerPlayers,263,João Félix,€30m
+SoccerPlayers,264,Morten Hjulmand,€30m
+SoccerPlayers,265,Orkun Kökçü,€30m
+SoccerPlayers,266,Charles De Ketelaere,€30m
+SoccerPlayers,267,Pedro Gonçalves,€30m
+SoccerPlayers,268,Ademola Lookman,€30m
+SoccerPlayers,269,Davide Frattesi,€30m
+SoccerPlayers,270,Nico Schlotterbeck,€30m
+SoccerPlayers,271,Alessandro Buongiorno,€30m
+SoccerPlayers,272,Frank Anguissa,€30m
+SoccerPlayers,273,Fabián Ruiz,€30m
+SoccerPlayers,274,Artem Dovbyk,€30m
+SoccerPlayers,275,Noussair Mazraoui,€30m
+SoccerPlayers,276,Eddie Nketiah,€30m
+SoccerPlayers,277,Takehiro Tomiyasu,€30m
+SoccerPlayers,278,Malcom,€30m
+SoccerPlayers,279,Mathias Jensen,€30m
+SoccerPlayers,280,Ben Chilwell,€30m
+SoccerPlayers,281,Marcos Llorente,€30m
+SoccerPlayers,282,Aleksandr Golovin,€30m
+SoccerPlayers,283,Rodrigo de Paul,€30m
+SoccerPlayers,284,Otávio,€30m
+SoccerPlayers,285,José Gayà,€30m
+SoccerPlayers,286,Jonathan Tah,€30m
+SoccerPlayers,287,John McGinn,€30m
+SoccerPlayers,288,Stanislav Lobotka,€30m
+SoccerPlayers,289,João Cancelo,€30m
+SoccerPlayers,290,Leon Goretzka,€30m
+SoccerPlayers,291,Jan Oblak,€30m
+SoccerPlayers,292,Thibaut Courtois,€30m
+SoccerPlayers,293,Romelu Lukaku,€30m
+SoccerPlayers,294,Marc-André ter Stegen,€30m
+SoccerPlayers,295,Mateo Kovacic,€30m
+SoccerPlayers,296,Lionel Messi,€30m
+SoccerPlayers,297,Casemiro,€30m
+SoccerPlayers,298,Hugo Larsson,€28m
+SoccerPlayers,299,Danilo,€28m
+SoccerPlayers,300,João Gomes,€28m
+SoccerPlayers,301,Jamie Bynoe-Gittens,€28m
+SoccerPlayers,302,Ilya Zabarnyi,€28m
+SoccerPlayers,303,Antony,€28m
+SoccerPlayers,304,Armando Broja,€28m
+SoccerPlayers,305,Youssouf Fofana,€28m
+SoccerPlayers,306,Karim Adeyemi,€28m
+SoccerPlayers,307,Matty Cash,€28m
+SoccerPlayers,308,Amine Gouiri,€28m
+SoccerPlayers,309,Giacomo Raspadori,€28m
+SoccerPlayers,310,Vitaliy Mykolenko,€28m
+SoccerPlayers,311,Kalvin Phillips,€28m
+SoccerPlayers,312,Ermedin Demirovic,€28m
+SoccerPlayers,313,Taiwo Awoniyi,€28m
+SoccerPlayers,314,Viktor Tsygankov,€28m
+SoccerPlayers,315,Alex Iwobi,€28m
+SoccerPlayers,316,Xaver Schlager,€28m
+SoccerPlayers,317,Konrad Laimer,€28m
+SoccerPlayers,318,Emiliano Martínez,€28m
+SoccerPlayers,319,Aleksandar Mitrovic,€28m
+SoccerPlayers,320,Thiago Almada,€27m
+SoccerPlayers,321,Mats Wieffer,€27m
+SoccerPlayers,322,Denzel Dumfries,€27m
+SoccerPlayers,323,Olivier Boscagli,€27m
+SoccerPlayers,324,Murillo,€25m
+SoccerPlayers,325,Pau Cubarsí,€25m
+SoccerPlayers,326,André,€25m
+SoccerPlayers,327,Aleksandar Pavlovic,€25m
+SoccerPlayers,328,Pablo Barrios,€25m
+SoccerPlayers,329,Alan Varela,€25m
+SoccerPlayers,330,Igor Thiago,€25m
+SoccerPlayers,331,Lesley Ugochukwu,€25m
+SoccerPlayers,332,Samuel Lino,€25m
+SoccerPlayers,333,Matías Soulé,€25m
+SoccerPlayers,334,Marcos Leonardo,€25m
+SoccerPlayers,335,Oscar Bobb,€25m
+SoccerPlayers,336,Bilal El Khannouss,€25m
+SoccerPlayers,337,Manu Koné,€25m
+SoccerPlayers,338,Georgiy Sudakov,€25m
+SoccerPlayers,339,Rayan Cherki,€25m
+SoccerPlayers,340,Pierre Kalulu,€25m
+SoccerPlayers,341,Strahinja Pavlovic,€25m
+SoccerPlayers,342,Radu Drăgușin,€25m
+SoccerPlayers,343,Álex Baena,€25m
+SoccerPlayers,344,Mohamed Camara,€25m
+SoccerPlayers,345,Terem Moffi,€25m
+SoccerPlayers,346,Anatoliy Trubin,€25m
+SoccerPlayers,347,Fábio Vieira,€25m
+SoccerPlayers,348,Amine Adli,€25m
+SoccerPlayers,349,Roger Ibañez,€25m
+SoccerPlayers,350,Dani Vivian,€25m
+SoccerPlayers,351,Pepê,€25m
+SoccerPlayers,352,Jesper Lindstrøm,€25m
+SoccerPlayers,353,Noni Madueke,€25m
+SoccerPlayers,354,Riccardo Calafiori,€25m
+SoccerPlayers,355,Facundo Medina,€25m
+SoccerPlayers,356,Brian Brobbey,€25m
+SoccerPlayers,357,Kevin Schade,€25m
+SoccerPlayers,358,David Neres,€25m
+SoccerPlayers,359,Nathan Collins,€25m
+SoccerPlayers,360,Youssoufa Moukoko,€25m
+SoccerPlayers,361,Mattéo Guendouzi,€25m
+SoccerPlayers,362,Rodrigo Riquelme,€25m
+SoccerPlayers,363,Andrea Cambiaso,€25m
+SoccerPlayers,364,Galeno,€25m
+SoccerPlayers,365,Martin Terrier,€25m
+SoccerPlayers,366,Aaron Ramsdale,€25m
+SoccerPlayers,367,Jakub Kiwior,€25m
+SoccerPlayers,368,Perr Schuurs,€25m
+SoccerPlayers,369,Felix Nmecha,€25m
+SoccerPlayers,370,Robert Sánchez,€25m
+SoccerPlayers,371,Jadon Sancho,€25m
+SoccerPlayers,372,Emile Smith Rowe,€25m
+SoccerPlayers,373,Yoane Wissa,€25m
+SoccerPlayers,374,Lovro Majer,€25m
+SoccerPlayers,375,Hiroki Ito,€25m
+SoccerPlayers,376,Sean Longstaff,€25m
+SoccerPlayers,377,Rico Henry,€25m
+SoccerPlayers,378,Denis Zakaria,€25m
+SoccerPlayers,379,Weston McKennie,€25m
+SoccerPlayers,380,Gianluca Scamacca,€25m
+SoccerPlayers,381,Marcus Edwards,€25m
+SoccerPlayers,382,Hee-chan Hwang,€25m
+SoccerPlayers,383,Lorenzo Pellegrini,€25m
+SoccerPlayers,384,Marc Cucurella,€25m
+SoccerPlayers,385,Mario Hermoso,€25m
+SoccerPlayers,386,Chris Führich,€25m
+SoccerPlayers,387,Kevin Danso,€25m
+SoccerPlayers,388,Unai Simón,€25m
+SoccerPlayers,389,Aleix García,€25m
+SoccerPlayers,390,Joe Gomez,€25m
+SoccerPlayers,391,Iñaki Williams,€25m
+SoccerPlayers,392,José María Giménez,€25m
+SoccerPlayers,393,Youri Tielemans,€25m
+SoccerPlayers,394,Álex Remiro,€25m
+SoccerPlayers,395,Paulo Dybala,€25m
+SoccerPlayers,396,Ruben Loftus-Cheek,€25m
+SoccerPlayers,397,Piotr Zieliński,€25m
+SoccerPlayers,398,Aymeric Laporte,€25m
+SoccerPlayers,399,Raphaël Varane,€25m
+SoccerPlayers,400,Kurt Zouma,€25m
+SoccerPlayers,401,Antoine Griezmann,€25m
+SoccerPlayers,402,Marco Verratti,€25m
+SoccerPlayers,403,Antonio Rüdiger,€25m
+SoccerPlayers,404,David Alaba,€25m
+SoccerPlayers,405,Maximilian Beier,€24m
+SoccerPlayers,406,Lewis Ferguson,€24m
+SoccerPlayers,407,Eljif Elmas,€24m
+SoccerPlayers,408,Evan Ndicka,€24m
+SoccerPlayers,409,Jerdy Schouten,€24m
+SoccerPlayers,410,Guido Rodríguez,€24m
+SoccerPlayers,411,Quilindschy Hartman,€23m
+SoccerPlayers,412,Yunus Musah,€23m
+SoccerPlayers,413,Tijjani Reijnders,€23m
+SoccerPlayers,414,Nathan Tella,€23m
+SoccerPlayers,415,Lewis Miley,€22m
+SoccerPlayers,416,Jorrel Hato,€22m
+SoccerPlayers,417,Tyrick Mitchell,€22m
+SoccerPlayers,418,Julio Enciso,€22m
+SoccerPlayers,419,Beto,€22m
+SoccerPlayers,420,Anthony Elanga,€22m
+SoccerPlayers,421,Kang-in Lee,€22m
+SoccerPlayers,422,James Garner,€22m
+SoccerPlayers,423,Taylor Harwood-Bellis,€22m
+SoccerPlayers,424,Wendel,€22m
+SoccerPlayers,425,Sacha Boey,€22m
+SoccerPlayers,426,Lucas Chevalier,€22m
+SoccerPlayers,427,Omar Marmoush,€22m
+SoccerPlayers,428,Pedro,€22m
+SoccerPlayers,429,Quinten Timber,€22m
+SoccerPlayers,430,Jack Harrison,€22m
+SoccerPlayers,431,Angel Gomes,€22m
+SoccerPlayers,432,Sergiño Dest,€22m
+SoccerPlayers,433,Igor Zubeldia,€22m
+SoccerPlayers,434,Deniz Undav,€22m
+SoccerPlayers,435,Konstantinos Tsimikas,€22m
+SoccerPlayers,436,Vangelis Pavlidis,€22m
+SoccerPlayers,437,Emiliano Buendía,€22m
+SoccerPlayers,438,Philip Billing,€22m
+SoccerPlayers,439,Dominic Calvert-Lewin,€22m
+SoccerPlayers,440,Albert Gudmundsson,€22m
+SoccerPlayers,441,Saïd Benrahma,€22m
+SoccerPlayers,442,Orel Mangala,€22m
+SoccerPlayers,443,Sofyan Amrabat,€22m
+SoccerPlayers,444,Mattia Zaccagni,€22m
+SoccerPlayers,445,Issa Diop,€22m
+SoccerPlayers,446,Vitaly Janelt,€22m
+SoccerPlayers,447,Patrik Schick,€22m
+SoccerPlayers,448,Solly March,€22m
+SoccerPlayers,449,Niklas Süle,€22m
+SoccerPlayers,450,Jordan Pickford,€22m
+SoccerPlayers,451,Carlos Baleba,€20m
+SoccerPlayers,452,Oscar Gloukh,€20m
+SoccerPlayers,453,Désiré Doué,€20m
+SoccerPlayers,454,Lucas Beraldo,€20m
+SoccerPlayers,455,Alex Scott,€20m
+SoccerPlayers,456,Javi Guerra,€20m
+SoccerPlayers,457,Dango Ouattara,€20m
+SoccerPlayers,458,Vanderson,€20m
+SoccerPlayers,459,Adam Wharton,€20m
+SoccerPlayers,460,Milos Kerkez,€20m
+SoccerPlayers,461,El Bilal Touré,€20m
+SoccerPlayers,462,Wilfried Singo,€20m
+SoccerPlayers,463,Enzo Le Fée,€20m
+SoccerPlayers,464,Ander Barrenetxea,€20m
+SoccerPlayers,465,Carlos Augusto,€20m
+SoccerPlayers,466,Arnaud Kalimuendo,€20m
+SoccerPlayers,467,Dwight McNeil,€20m
+SoccerPlayers,468,Lazar Samardžić,€20m
+SoccerPlayers,469,Miguel Gutiérrez,€20m
+SoccerPlayers,470,Amar Dedic,€20m
+SoccerPlayers,471,Giovanni Reyna,€20m
+SoccerPlayers,472,Aaron Wan-Bissaka,€20m
+SoccerPlayers,473,Renan Lodi,€20m
+SoccerPlayers,474,Marcos Senesi,€20m
+SoccerPlayers,475,Samuele Ricci,€20m
+SoccerPlayers,476,Maxence Lacroix,€20m
+SoccerPlayers,477,Jørgen Strand Larsen,€20m
+SoccerPlayers,478,Caio Henrique,€20m
+SoccerPlayers,479,Ismaïla Sarr,€20m
+SoccerPlayers,480,Samuel Chukwueze,€20m
+SoccerPlayers,481,Dodô,€20m
+SoccerPlayers,482,Marcus Tavernier,€20m
+SoccerPlayers,483,Maxence Caqueret,€20m
+SoccerPlayers,484,Nicolò Zaniolo,€20m
+SoccerPlayers,485,Jonas Wind,€20m
+SoccerPlayers,486,Yangel Herrera,€20m
+SoccerPlayers,487,Carlos Soler,€20m
+SoccerPlayers,488,Ferdi Kadıoğlu,€20m
+SoccerPlayers,489,Arthur Theate,€20m
+SoccerPlayers,490,Florentino,€20m
+SoccerPlayers,491,Antonee Robinson,€20m
+SoccerPlayers,492,Noah Okafor,€20m
+SoccerPlayers,493,Odsonne Edouard,€20m
+SoccerPlayers,494,Kyle Walker-Peters,€20m
+SoccerPlayers,495,Noa Lang,€20m
+SoccerPlayers,496,Sander Berge,€20m
+SoccerPlayers,497,Christoph Baumgartner,€20m
+SoccerPlayers,498,Sebastian Szymanski,€20m
+SoccerPlayers,499,Marco Asensio,€20m
