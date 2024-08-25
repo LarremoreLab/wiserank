@@ -21,7 +21,7 @@ A general platform for ranking from pairwise comparisons
   ```
 
 - navigate to the backend directory: `cd backend`
-- in terminal, run the database initialization script: `python initialize.py`
+- in terminal, run the database initialization script: `python initialize_db.py`
 
 - start the backend
   - from the backend directory, `flask --app wiserank --debug run -p 5001`
