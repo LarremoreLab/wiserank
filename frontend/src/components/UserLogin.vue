@@ -1,6 +1,10 @@
 <template>
   <div>
-    <input v-model="email" type="text" placeholder="email or username">
+    <input 
+    v-model="email" 
+    type="text" 
+    placeholder="email or username"
+    @keydown.enter="handleEnter">
     <button @click="loadUser">Create or Load Profile</button>
   </div>
 </template>
@@ -27,7 +31,11 @@ export default {
             .catch(error => {
                 console.error('Error:', error);
             });
-    }
+    },
+    handleEnter() {
+      // Trigger the button click programmatically
+      this.loadUser();
+    },
   }
 }
 </script>
