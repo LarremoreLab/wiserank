@@ -10,7 +10,7 @@ class Selection(db.Model):
     selected = db.Column(db.Boolean)
 
     def __repr__(self):
-        return '<{}, {}>'.format(self.session_id, self.obj_id)
+        return '<{}, {}, {}>'.format(self.session_id, self.obj_id, self.selected)
 
 
 class Comparison(db.Model):
@@ -35,6 +35,8 @@ class Session(db.Model):
     selections = db.relationship('Selection')
     comparisons = db.relationship('Comparison')
     completed_on = db.Column(db.DateTime)
+    def __repr__(self):
+        return '<{}, {}>'.format(self.user_id, self.track)
 
 
 class User(db.Model):
@@ -45,46 +47,16 @@ class User(db.Model):
 
     sessions = db.relationship('Session')
 
-    # consented = db.Column(db.Boolean)
-    # ref = db.Column(db.String(64))
-    # keep_email = db.Column(db.String(64))
-    # firstname = db.Column(db.String(120))
-    # lastname = db.Column(db.String(120))
-
     def __repr__(self):
         return '<{}>'.format(self.email)
-
-
-class Journal(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    link_id = db.Column(db.String(16))
-    name = db.Column(db.String(240))
-
-    def __repr__(self):
-        return '<{}>'.format(self.name)
     
 
-class Movie(db.Model):
+class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     link_id = db.Column(db.String(16))
-    name = db.Column(db.String(240))
-
-    def __repr__(self):
-        return '<{}>'.format(self.name)
-    
-
-class SoccerPlayer(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    link_id = db.Column(db.String(16))
-    name = db.Column(db.String(240))
-    extra = db.Column(db.String(240))
-
-
-class Stock(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    link_id = db.Column(db.String(16))
+    track = db.Column(db.String(64)) # stock, soccerPlayer, movie, journal
     name = db.Column(db.String(240))
     extra = db.Column(db.String(240))
 
     def __repr__(self):
-        return '<{}>'.format(self.name)
+        return '<{}: {}>'.format(self.track, self.name)
