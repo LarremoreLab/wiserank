@@ -25,10 +25,11 @@ git clone git@github.com:LarremoreLab/wiserank.git
 Wiserank contains four example datasets of items to compare: movies, academic journals, soccer players, and stocks from the S&P 500.
 
 Add any files with items you want users to compare as .csv files in the data/parsed directory. Each csv file should have the following columns:
-    - "track": a label that indicates a collection of items that can be compared
-    - "link_id": an id that uniquely identifies the item in the context of the other items in its original dataset
-    - "name": a display name for an item
-    - "meta": an additional piece of metadata to be displayed along with the name but only after comparisons have been made (optional)
+
+- "track": a label that indicates a collection of items that can be compared
+- "link_id": an id that uniquely identifies the item in the context of the other items in its original dataset
+- "name": a display name for an item
+- "meta": an additional piece of metadata to be displayed along with the name but only after comparisons have been made (optional)
 
 Delete the example files containing items that you do not want users to be able to compare. For the tutorial and testing, it can be useful to keep a couple of these (e.g. movies, academic journals).
 
