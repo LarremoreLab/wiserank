@@ -53,6 +53,8 @@ def load_user():
     if email == "":
         hash = post_data["hash"]
         user = db.session.scalars(db.select(User).filter_by(hash=hash)).first()
+        if user is None:
+            return jsonify(user={"hash":"", "email":"", "sessions":[]})
     else:
         user = db.session.scalars(db.select(User).filter_by(email=email)).first()
 
