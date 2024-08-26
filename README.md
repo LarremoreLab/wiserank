@@ -31,3 +31,5 @@ A general platform for ranking from pairwise comparisons
     - serve the web app: `npm run serve`
 
 - navigate to [localhost:8080](http://localhost:8080)
+
+- The code in frontend/src/App.vue can be changed to prevent users from creating accounts or accessing any account with only the relevant email/username.

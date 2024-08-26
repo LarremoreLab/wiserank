@@ -6,7 +6,7 @@
       <p v-else>{{ email }}</p>
     </div>
     <div v-if="hash == ''">
-      <!-- toggle to make wise rank invite only (generate hashes for users) -->
+      <!-- toggle v-if to "false" to make wise rank invite only (users cannot generate hashes) -->
       <UserLogin v-if="true" @userLoaded="displayUser"/> 
       <InviteOnly v-else />
     </div>
