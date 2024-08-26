@@ -190,7 +190,7 @@ def rank_individual():
     session = db.session.scalars(db.select(Session).filter_by(id=sess_id)).first()
     ranking = individual_ranking(session, db)
     comparisons = [(p.win_id,p.lose_id,p.tie) for p in session.comparisons]
-
+    print(ranking, comparisons)
     return jsonify(ranking=ranking,comparisons=comparisons)
 
 

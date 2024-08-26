@@ -1,10 +1,10 @@
 <template>
   <div v-show="loaded">
     <!-- <hr class="solid"> -->
-    <div>
-        <h4>Compare Items:</h4>
-    </div>
     <div v-if="isPair">
+      <div>
+        <h4>Compare Items:</h4>
+      </div>
       <button id="leftItem" @click="submit_and_load_pair(0)">&larr; 1.</button>
       <button id="rightItem" @click="submit_and_load_pair(1)">2. &rarr;</button>
       <div>
@@ -14,6 +14,9 @@
         </li>
       </ol>
       </div>
+    </div>
+    <div v-else>
+      <h4>Nothing to Compare!</h4>
     </div>
   </div>
 </template>

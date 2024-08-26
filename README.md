@@ -25,7 +25,9 @@ A general platform for ranking from pairwise comparisons
 
 - start the backend
   - from the backend directory, `flask --app wiserank --debug run -p 5001`
-- start the frontend
-  - in a new terminal, from the frontend directory: `npm run serve`
+- start the frontend (install [npm](https://nodejs.org/en/download/package-manager) if you do not already have it)
+  - in a new terminal, from the frontend directory:
+    - install node dependencies: `npm install`
+    - serve the web app: `npm run serve`
 
 - navigate to [localhost:8080](http://localhost:8080)

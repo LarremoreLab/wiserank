@@ -1,11 +1,13 @@
 <template>
   <div v-show="loaded">
-    <div>
-      <h4 :style="{marginBottom:'10px'}">Visualize Ranking:</h4>
-      <!-- <p class="hoveredNode">{{ hoveredNode.name }}</p> -->
-    </div>
-    <div v-if="ranking !== null">
+    <div v-if="ranking.length !== 0">
+      <div>
+        <h4 :style="{marginBottom:'10px'}">Visualize Ranking:</h4>
+      </div>
       <IndividualRanking :items="ranking" :comparisons="comparisons" @hovered="nodeHover"/>
+    </div>
+    <div v-else>
+      <h4 :style="{marginBottom:'10px'}">Nothing to Rank!</h4>
     </div>
     <div>
       <ol>
@@ -29,9 +31,9 @@ export default {
   props: ["sessionID"],
   data() {
     return {
-      ranking: null,
+      ranking: [],
       loaded: false,
-      comparisons: null,
+      comparisons: [],
       hoveredNode: {'name':''}
     };
   },

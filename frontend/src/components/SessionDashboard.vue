@@ -9,7 +9,7 @@
     <div v-if="sessions.length > 0">
       <h4>Continue an Existing Session:</h4>
       <div v-for="s,i in sessions" :key="s[0]">
-        <button @click="this.$emit('selectSession',s,i,false)">{{ i+1 }} ({{ s[1] }})</button>
+        <button @click="this.$emit('selectSession',s,i,false)">{{ s[1] }} ({{ i+1 }})</button>
       </div>
     </div>
   </div>
