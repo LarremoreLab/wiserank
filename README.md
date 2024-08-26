@@ -59,4 +59,4 @@ If necessary, install [npm](https://nodejs.org/en/download/package-manager). The
 
 In a web browser, navigate to [localhost:8080](http://localhost:8080). Create an account as prompted and try out wiserank with one of the example datasets (hint: searching for items in the selection stage can help jump-start the item recommendation algorithms for movies and academic journals).
 
-In the future, the code in frontend/src/App.vue can be changed to prevent users from creating accounts or accessing any account with only the relevant email/username.
+Depending on how study participants will interact with wiserank, the code in frontend/src/App.vue can be changed to prevent participants from creating accounts or accessing any account with only the relevant email/username.
