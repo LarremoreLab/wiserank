@@ -1,6 +1,6 @@
 # wiserank
 
-**wiserank** is a simple platform for running pairwise comparison experiments: participants can select a set of items to compare, make pairwise comparisons, and visualize an inferred ranking. Made with [flask](https://flask.palletsprojects.com/en/3.0.x/) and [Vue.js](https://vuejs.org/), wiserank can either be run locally to support experiments in a lab setting or developed into a full web application.
+**wiserank** is a simple platform for running pairwise comparison experiments: participants can select a set of items to compare, make pairwise comparisons, and visualize an inferred ranking. Made with [flask](https://flask.palletsprojects.com/en/3.0.x/) and [Vue.js](https://vuejs.org/), wiserank can either be run locally to support experiments in a lab setting or slightly modified for use as a full web application.
 
 ## Tutorial
 
