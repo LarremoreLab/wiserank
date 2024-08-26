@@ -6,7 +6,9 @@
       <p v-else>{{ email }}</p>
     </div>
     <div v-if="hash == ''">
-      <UserLogin @userLoaded="displayUser"/>
+      <!-- toggle to make wise rank invite only (generate hashes for users) -->
+      <UserLogin v-if="true" @userLoaded="displayUser"/> 
+      <InviteOnly v-else />
     </div>
     <div v-else>
       <div v-if="activeSessionID == ''">
@@ -23,6 +25,7 @@
 import axios from 'axios';
 
 import UserLogin from './components/UserLogin.vue'
+import InviteOnly from './components/InviteOnly.vue'
 import SessionDashboard from './components/SessionDashboard.vue'
 import SingleSession from './components/SingleSession.vue'
 
@@ -31,6 +34,7 @@ export default {
   name: 'App',
   components: {
     UserLogin,
+    InviteOnly,
     SessionDashboard,
     SingleSession
   },
