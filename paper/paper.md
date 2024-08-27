@@ -10,9 +10,6 @@ authors:
  - name: Ian Van Buskirk
    orcid: 0000-0003-2298-5149
    affiliation: 1
- - name: Aaron Clauset
-   orcid: 0000-0002-3529-8746
-   affiliation: "1, 2, 3"
  - name: Daniel B. Larremore
    orcid: 0000-0001-5273-5234
    affiliation: "1, 2, 3"
@@ -42,6 +39,6 @@ Attention can be drawn to two specific places where customization of a pairwise 
 
 # Acknowledgements
 
-We acknowledge early and valuable feedback from Kate Wootton and Johan Ugander in shaping the design of this project.
+We acknowledge early and valuable feedback from Kate Wootton, Johan Ugander, and Aaron Clauset in shaping the design of this project.
 
 # References
