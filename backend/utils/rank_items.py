@@ -39,13 +39,5 @@ def individual_ranking(session, db, alpha=2):
             
     user_ranks = sr.SpringRank(a_matrix,alpha=alpha)
 
-    # # scale ranks
-    # scale = .75
-    # # the next line gives "ValueError: f(a) and f(b) must have different signs"
-    # inverse_temperature = sr.get_inverse_temperature(a_matrix, user_ranks)
-    # scaling_factor = 1 / (np.log(scale / (1 - scale)) / (2 * inverse_temperature))
-    scaled_ranks = user_ranks # sr.scale_ranks(user_ranks,scaling_factor)
-
-    # store in dictionary
-    user_ranking = sorted([(int(k),scaled_ranks[i],selected_names[k]) for k,i in a_pos.items()], key = lambda x:x[1], reverse=True)
+    user_ranking = sorted([(int(k),user_ranks[i],selected_names[k]) for k,i in a_pos.items()], key = lambda x:x[1], reverse=True)
     return user_ranking

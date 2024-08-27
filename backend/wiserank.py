@@ -2,7 +2,7 @@ from backend.utils.models import User, Session, Selection, Comparison, Item
 from backend.utils.database import db
 from backend.utils.hasher import hash_string
 from backend.utils.select_item import rec_item
-from backend.utils.pair_items import random_pair
+from backend.utils.pair_items import pair_item
 from backend.utils.rank_items import individual_ranking
 
 import os
@@ -28,7 +28,6 @@ database_uri = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(bas
 app.config['SQLALCHEMY_DATABASE_URI'] = database_uri.replace('postgres://', 'postgresql://')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-print(os.environ.get('DATABASE_URL'),os.environ.get('DATABASE_CONNECTION_POOL_URL'))
 db.init_app(app)
 migrate = Migrate(app, db)
 db.app = app
@@ -180,7 +179,7 @@ def submit_load_pair():
 
     # load item
     session = db.session.scalars(db.select(Session).filter_by(id=sess_id)).first()
-    new = random_pair(session, db)
+    new = pair_item(session, db)
 
     return jsonify(new=new)
 
@@ -192,7 +191,7 @@ def rank_individual():
     session = db.session.scalars(db.select(Session).filter_by(id=sess_id)).first()
     ranking = individual_ranking(session, db)
     comparisons = [(p.win_id,p.lose_id,p.tie) for p in session.comparisons]
-    print(ranking, comparisons)
+    
     return jsonify(ranking=ranking,comparisons=comparisons)
 
 
