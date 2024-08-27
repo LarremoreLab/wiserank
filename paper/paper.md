@@ -7,7 +7,9 @@ tags:
   - flask
   - vue.js
 authors:
- - name: Ian Van Buskirk
+ - given-names: Ian
+   non-dropping-particle: Van
+   surname: Buskirk
    orcid: 0000-0003-2298-5149
    affiliation: 1
  - name: Daniel B. Larremore
