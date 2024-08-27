@@ -15,7 +15,7 @@ authors:
    affiliation: "1, 2, 3"
  - name: Daniel B. Larremore
    orcid: 0000-0001-5273-5234
-   affiliation: "1, 2"
+   affiliation: "1, 2, 3"
 affiliations:
  - name: Department of Computer Science, University of Colorado Boulder, Boulder, CO, USA
    index: 1
@@ -28,7 +28,11 @@ bibliography: paper.bib
 
 # Summary
 
-``wiserank`` is a platform with which researchers can run pairwise comparison experiments. To start, researchers specify a set of items (e.g. movies) and load them into the platform. Then each participant in the study selects a subset of the items that are relevant to them and makes a number of pairwise comparisons between their selected items. Each participant can also visualize an inferred ranking of the items they have selected based on the comparisons they made. All of the participant data is collected and stored in a database for researchers to access and analyze.
+``wiserank`` is software that allows researchers to run customized pairwise comparison experiments. In the most basic version of a pairwise comparison experiment, a participant is presented with a choice between a pair of items. If a participant is presented with many such pairwise choices, a researcher can learn the participant's preferences. However, this approach may require an excessive number of pairwise comparisons when there are many items to compare, making pairwise comparison experiments with a large number of items and participants slow and unwieldy.  The goal of ``wiserank`` is to provide a solution to address this issue by exposing two speedups to researcher customization in a self-contained, researcher-friendly and participant-friendly package.
+
+From the participant's perspective, the software experience proceeds in two stages. First, the participant selects a subset of all the items (sometimes called a *consideration set*). For instance, a participant might choose only the shirts they would consider buying from the set of all shirts. Second, the participant is presented with pairs of items for comparison from the consideration set, until some stopping condition is reached. For instance, a participant might choose the shirt they like better. Optionally, a participant can also visualize an inferred ranking of the items from the consideration set, based on the comparisons they made.
+
+From the researcher's perspective, there are four straightforward customizations of this process: (i) specification of the items, (ii) the algorithmic procedure by which items are shown to the participant to be placed in the consideration set, (iii) the algorithmic procedure by which pairwise comparisons are suggested, and (iv) the data visualization presented to the participant. By separating the formation of the consideration set from the pairwise comparisons, and allowing for customization of algorithmic procedures, experiments can be made markedly faster for participants. All participant data is collected and stored in a database for researchers to access and analyze.
 
 # Statement of Need
 
