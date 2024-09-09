@@ -21,6 +21,7 @@ affiliations:
  - name: BioFrontiers Institute, University of Colorado Boulder, Boulder, CO, USA
    index: 2
  - name: Santa Fe Institute, Santa Fe, NM, USA
+   index: 3
 date: 26 August 2024
 bibliography: paper.bib
 ---
